@@ -1,0 +1,105 @@
+body,ul,li,a{
+  padding: 0;
+  margin:0;
+}
+a{
+  text-decoration: none;
+}
+aside a{
+  color:#000000;
+  text-decoration: none;
+}
+section{
+  position:absolute;
+  right: 0px;
+  top: 0px;
+  width: 87%;
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+aside{
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 3px 0px 6px 0px #eeeeee;
+}
+aside,section{
+  display: inline-block;
+}
+aside ul li{
+  display: block;
+  padding: 30px 0;
+  font-size: 24px;
+}
+aside ul li:hover{
+  background:#dddad3;
+}
+
+aside ul{
+  margin-top:-40px;
+  padding-top: 40px;
+}
+aside img{
+  width:75%;
+}
+section header{
+  box-shadow: 3px 0px 6px 0px #eeeeee;
+  padding: 30px 20px 30px 10px;
+}
+section header input{
+  width:100%;
+}
+section header .input_box{
+  padding:8px 10px 20px 15px;
+  background: rgb(208, 208, 208);
+  display: inline-block;
+  width: 80%;
+  margin-right:1%;
+}
+header form .button_add{
+  display: inline-block;
+  border: 2px solid #747474;
+  text-align: center;
+  padding: 15px 40px;
+  border-radius: 10px;
+  background: #ffff;
+  font-size: 15px;
+  position: relative;
+  top: 5px;
+}
+section .main{
+  box-shadow: 3px 0px 6px 0px #eeeeee;
+  border-top: 36px solid #f4f4f4;
+  padding: 20px 20px 150px 20px;
+}
+.main table thead{
+  border-bottom: 2px solid #d5e0eb;
+}
+table td{
+  text-align: center;
+}
+.delete,.change{
+  border: 1.5px #a9b1ad solid;
+  border-radius: 10px;
+}
+.Conf_box{
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  left: 500px;
+  box-shadow: 1px 1px 10px 0px #a08b8b;
+  background: #ffffff;
+}
+/*.Conf_box button{
+  border-radius: 10px;
+  background: #ffffff;
+  margin: 10px 10px;
+}*/
+
+.main thead td{
+}
+.main tbody tr{
+}

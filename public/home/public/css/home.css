@@ -1,0 +1,198 @@
+*{
+			font-family: 微软雅黑;
+			padding: 0px;
+			margin:0px;
+		}
+		
+		/*stan和pro导航*/
+		.daohang{
+			background: #737373;
+		}
+		.daohang-zuo{
+			display: inline-block;
+			width: 150px;
+			background: #fff;
+			height: 100%;
+		}
+		.daohang-you{
+			display: inline-block;
+			width: 150px;
+			/*background: #fff;*/
+			height: 100%;
+		}
+		.daohang-zuo .stan a{
+			color: #3b3b3b;
+		}
+		.daohang-you .pro a{
+			color: #3b3b3b;
+		}
+		
+		/*三张展示图片*/
+		.center .img3 label{
+			border:none;
+			max-width:100%;
+			max-height:100%; 
+			display:block; 
+			margin:auto;
+			background: #ccc;
+		}
+
+		/*脚本菜单*/
+		.footer .first{
+			float: left;
+			width: 18%;
+			padding-left: 11%;
+		}
+		.footer .second{
+			float: left;
+			width: 18%;
+			padding-left: 11%;
+		}
+		.footer .third{
+			float: left;
+			width: 18%;
+			padding-left: 11%;
+		}
+		.footer .forth{
+			float: left;
+			width: 18%;
+			padding-left: 11%;
+		}
+		.footer .fifth{
+			float: left;
+			width: 18%;
+			padding-left: 11%;
+		}
+		.footer label{
+			display: block;
+			height: 37px;
+			overflow: hidden;
+			position: relative;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			width: 100%;
+			line-height: 1.8em;
+			cursor: pointer;
+			font-weight: normal;
+		}
+		.footer .title{
+			color: #008FD4;
+			font-size: 1.5em;
+		}
+		.footer .info{
+			font-size: 1.2em;
+		}
+
+		/*底角空白*/
+		.kongbai{
+			overflow: hidden;
+			position: relative;
+			padding: 19px 0 2% 3%;
+			width: 100%;
+			border-top: 0px solid #ccc;
+		}
+
+		/*顶部导航菜单*/
+		.top{
+			height: 80px;
+			background: #3b3b3b;
+			font-size:28px;
+		}
+		.top .main{
+			width: 100%;
+		}
+		.top .main a{
+			text-decoration: none;
+			cursor: pointer;
+			/*color:#eee; */
+		}
+		.top .main .main-a{
+			display: inline-block;
+			height: 97px;
+			margin-top: -40px;
+		}
+		.top .a1{
+			margin-left: 20px;
+		}
+		.top .a1 img{
+			margin-top: 33px;
+		}
+		.top .a2{
+			margin-left: 20px;
+			width: 100px;
+		}
+		.top .a2 .b2{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+		}
+		.top .a2 .zy{
+			color: #eee;	
+			margin-left: 20px;
+		}
+		.top .a3{
+			margin-left: 20px;
+			width: 150px;
+		}
+		.top .a3 .cp{
+			color: #eee;	
+			margin-left: 20px;
+		}
+		.top .a3 .b3{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+		}
+
+		.top .a4{
+			margin-left: 20px;
+			width: 150px;
+		}
+		.top .a4 .gm{
+			margin-left: 20px;
+			color: #eee;	
+		}
+		.top .a4 .b4{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+		}
+		.top .a5{
+			margin-left: 20px;
+			width: 100px;
+		}
+		.top .a5 .b5{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+		}
+		.top .a5 .fw{
+			color: #eee;	
+			margin-left: 20px;
+		}
+		.top .a6{
+			margin-left: 290px;
+			width: 150px;
+		}
+		.top .a6 .b6{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+		}
+		.top .a6 .yingyong{
+			margin-left: 20px;
+			color: #eee;	
+		}
+		.top .a7 .b7{
+			/*background: #ccc;*/
+			position: relative;
+			top: 20%;
+			width: 50px;
+		}
+		.top .a7 .tubiao{
+			color: #eee;	
+			margin-left: 10px;
+		}
+		.top .a7{
+			margin-left: 50px;
+		}
