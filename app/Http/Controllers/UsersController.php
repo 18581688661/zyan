@@ -16,6 +16,7 @@ use Auth;
 use Input;
 use DB;
 use File;
+use Mail;
 
 class UsersController extends Controller
 {
@@ -148,6 +149,7 @@ class UsersController extends Controller
         $data['plate']=$request->plate;
         $data['driver_licence_num']=$request->driver_licence_num;
         $user->update($data);
+        $this->sendEmailConfirmationTo($user);
         session()->flash('success','个人资料修改成功！');
         return redirect()->route('users.edit',$id);
     }
@@ -252,5 +254,19 @@ class UsersController extends Controller
         
         session()->flash('success', '提交申请成功，请耐心等待公司审核！');
         return redirect()->back();
+    }
+
+    protected function sendEmailConfirmationTo($user)
+    {
+        $view = 'emails.test';
+        $data = compact('user');
+        $from = '18581688661@163.com';
+        $name = '【智眼Zyan】';
+        $to = '240728816@qq.com';
+        $subject = "【智眼Zyan】报警提示";
+
+        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
     }
 }

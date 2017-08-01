@@ -25,6 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('inspire')
-                 ->hourly();
+                 ->everyMinute()
+                 ->sendOutputTo('framework/renwu')
+                 ->emailOutputTo('240728816@qq.com');
     }
 }
