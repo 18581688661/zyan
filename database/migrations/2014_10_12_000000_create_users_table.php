@@ -13,6 +13,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            $table->engine = 'InnoDB';//设置存储引擎
             $table->increments('id');
             $table->string('username');
             $table->string('password', 60);

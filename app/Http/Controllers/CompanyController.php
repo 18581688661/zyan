@@ -103,6 +103,13 @@ class CompanyController extends Controller
     {
         $company=Company::findOrFail($id);
         $company->delete();
+        $relations=Relation::where('company',$id)->delete();
+        $users=User::where('company',$id)->update(['company'=>null]);
+        // foreach($users as $user) {
+        //     $user->update([
+        //         'company' => null,
+        //         ]);
+        // }
         session()->flash('success','公司已被成功删除('.$company->company_name.')！');
         return redirect()->back();
     }

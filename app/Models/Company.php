@@ -48,4 +48,13 @@ class Company extends Model implements AuthenticatableContract,
         $user_ids=Auth::company()->get()->own->pluck('user')->toArray();
         return User::whereIn('id',$user_ids);
     }
+
+    public function relations()
+    {
+        //一对多（“一”属于上层模型）
+        //hasMany第一个参数：对应的模型类
+        //第二个参数：（可选）外键名称，默认‘对应上层模型类_id’,否则需要重写外键
+        //第三个参数：（可选）上层模型本地键,默认‘id’，否则自定义本地键
+        return $this->hasMany('App\Models\Relation','company');
+    }
 }

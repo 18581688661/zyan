@@ -47,5 +47,6 @@ Route::post('employee_audit/{id}','CompanyController@employee_audit')->name('emp
 Route::post('employee_refuse_audit/{id}','CompanyController@employee_refuse_audit')->name('employee_refuse_audit');//拒绝员工
 Route::post('employee_delete/{id}','CompanyController@employee_delete')->name('employee_delete');//公司移除员工
 Route::get('monitor','CompanyController@monitor')->name('monitor');//增加entity主页面
-
-
+Route::get('test','UsersController@test')->name('test');
+Route::get('test1','UsersController@test1')->name('test1');
+Route::get('test2','UsersController@test2')->name('test2');

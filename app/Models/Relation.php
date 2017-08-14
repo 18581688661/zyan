@@ -44,4 +44,12 @@ class Relation extends Model implements AuthenticatableContract,
         return $company->company_name;
     }
 
+    public function companys()
+    {
+        //多对一（“一”属于上层模型）
+        //belongsTo第一个参数：对应的模型类
+        //第二个参数：（可选）外键名称，默认‘对应上层模型类_id’,否则需要重写外键
+        //第三个参数：（可选）上层模型本地键,默认‘id’，否则自定义本地键
+        return $this->belongsTo('App\Models\Company','company');
+    }
 }

@@ -17,6 +17,8 @@ use Input;
 use DB;
 use File;
 use Mail;
+use Cache;
+
 
 class UsersController extends Controller
 {
@@ -31,32 +33,6 @@ class UsersController extends Controller
     public function create()
     {
         return view('users.create');
-    }
-
-    public function sms()
-    {
-        $statusStr = array(
-        "0" => "短信发送成功",
-        "-1" => "参数不全",
-        "-2" => "服务器空间不支持,请确认支持curl或者fsocket，联系您的空间商解决或者更换空间！",
-        "30" => "密码错误",
-        "40" => "账号不存在",
-        "41" => "余额不足",
-        "42" => "帐户已过期",
-        "43" => "IP地址限制",
-        "50" => "内容含有敏感词"
-         );  
-        $smsapi = "http://www.smsbao.com/"; //短信网关
-        $user = "weiwei2018"; //短信平台帐号
-        $pass = md5("w123456"); //短信平台密码
-        $code=rand(100000,999999);
-        Session_Start();
-        $_SESSION["verify_code"]=$code;
-        $content="【智眼Zyan】验证码：".$code;//要发送的短信内容
-        $phone = $_GET["mobile"];
-        $sendurl = $smsapi."sms?u=".$user."&p=".$pass."&m=".$phone."&c=".urlencode($content);
-        $result =file_get_contents($sendurl) ;
-        // echo $statusStr[$result];
     }
 
     public function store(Request $request)
@@ -268,5 +244,54 @@ class UsersController extends Controller
         Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
             $message->from($from, $name)->to($to)->subject($subject);
         });
+    }
+
+    public function sms()
+    {
+        $statusStr = array(
+        "0" => "短信发送成功",
+        "-1" => "参数不全",
+        "-2" => "服务器空间不支持,请确认支持curl或者fsocket，联系您的空间商解决或者更换空间！",
+        "30" => "密码错误",
+        "40" => "账号不存在",
+        "41" => "余额不足",
+        "42" => "帐户已过期",
+        "43" => "IP地址限制",
+        "50" => "内容含有敏感词"
+         );  
+        $smsapi = "http://www.smsbao.com/"; //短信网关
+        $user = "weiwei2018"; //短信平台帐号
+        $pass = md5("w123456"); //短信平台密码
+        $code=rand(100000,999999);
+        Session_Start();
+        $_SESSION["verify_code"]=$code;
+        $content="【智眼Zyan】验证码：".$code;//要发送的短信内容
+        $phone = $_GET["mobile"];
+        $sendurl = $smsapi."sms?u=".$user."&p=".$pass."&m=".$phone."&c=".urlencode($content);
+        $result =file_get_contents($sendurl) ;
+        // echo $statusStr[$result];
+    }
+
+    //测试代码
+    public function test()
+    {
+        $relations=Company::findOrFail(1)->relations;
+        foreach ($relations as $relation) {
+            echo $relation->user;
+        }
+    }
+
+    public function test1()
+    {
+        $company=Relation::findOrFail(1)->companys;
+        // echo $company->company_name;
+        // echo  Cache::get('key');
+        echo Cache::has('key');
+    }
+
+    public function test2()
+    {
+        Cache::put('key', '<a href="http://baidu.com">百度</a>', '60');
+        echo  Cache::get('key');
     }
 }
