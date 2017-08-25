@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>【智眼Zyan】报警提示</title>
+  <title>【勤智数码】工时登记提醒</title>
 </head>
 <body>
 
-  <p>警告！有人正在触碰您的货车油箱，请打开APP查看报警详情并及时处理。</p>
+  <p>记得每天登记工时哦！</p>
 
 </body>
 </html>
