@@ -1,6 +1,6 @@
 @extends('layouts.default')
-@section('title', '修改个人资料')
-@section('title1', '个人中心')
+@section('title', '个人资料')
+@section('title1', '用户中心')
 @section('content')
 <div class="row">
     <!-- 左边 -->
@@ -34,8 +34,8 @@
         </div>
         
         <!-- 右边 -->
-        <div class=" col-lg-10">
-            <div class="panel panel-default">
+      <div class=" col-lg-10">
+          <div class="panel panel-default">
           <div class="panel-heading">
           <h5>修改个人资料</h5>
           </div>

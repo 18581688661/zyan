@@ -1,7 +1,7 @@
 <nav class="dh">
     <h3>
         <span class="sx"><span class="zy"><a style="text-decoration: none;" href="/">Zyan</a></span></span>
-        <span class="ht">@yield('title2', '智能货车助手')</span>
+        <span class="ht">@yield('title1', '智眼首页')</span>
 		@if (Auth::user()->check())
         <div class="drop dropdown pull-right" style="margin-right: 74px">
             <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;font-size:18px;text-decoration: none;color:#666">

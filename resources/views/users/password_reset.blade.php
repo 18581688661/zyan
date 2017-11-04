@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title', '重置密码')
-
+@section('title1', '重置密码')
 @section('content')
 <div class="container-fluid">
   <div class="row">
@@ -34,11 +34,9 @@
             </div>
 
             <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
                   重置
                 </button>
-              </div>
             </div>
           </form>
         </div>

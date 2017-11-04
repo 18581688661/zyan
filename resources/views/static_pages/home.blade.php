@@ -1,5 +1,4 @@
 @extends('layouts.default')
-@section('title1', '智眼')
 @section('content')
   <!-- @if (Auth::check() or Auth::manager()->check() or Auth::company()->check())
    <div class="jumbotron">

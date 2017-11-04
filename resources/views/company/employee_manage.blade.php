@@ -9,7 +9,15 @@
                 <a href="{{ route('company.show', Auth::company()->get()->id) }}">
                 <div class="wz ycdh">
                     <div class="tb tb1">
-                            <p id="a1"><img src="/admin/public/img/dw1.png" alt=""><span>&nbsp实时监控</span></p>
+                            <p id="a1"><img src="/admin/public/img/tj1.png" alt=""><span>&nbsp报警情况</span></p>
+                    </div>
+                </div>
+                </a>
+
+                <a href="#">
+                <div class="ry ycdh">
+                    <div class="tb tb3">
+                        <p class="a3"><img id="tb1-img" src="/admin/public/img/ej1.png" alt="">&nbsp公司资料</p>
                     </div>
                 </div>
                 </a>
@@ -18,14 +26,6 @@
                 <div class="ry ycdh" style="background: rgb(227, 247, 254);border-right: 3px solid rgb(107, 213, 255)">
                     <div class="tb tb3">
                         <p class="a3" style="color:#12BCFF"><img id="tb1-img" src="/admin/public/img/ry2.png" alt="">&nbsp员工管理</p>
-                    </div>
-                </div>
-                </a>    
-
-                <a href="#">
-                <div class="ry ycdh">
-                    <div class="tb tb3">
-                        <p class="a3"><img id="tb1-img" src="/admin/public/img/ry1.png" alt="">&nbsp待定。。</p>
                     </div>
                 </div>
                 </a>        

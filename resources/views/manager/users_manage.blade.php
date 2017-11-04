@@ -7,25 +7,9 @@
         <div class="col-lg-2">
             <div class="yc">
                 <a href="{{ route('manager.show', Auth::manager()->get()->id) }}">
-                <div class="wz ycdh">
-                    <div class="tb tb1">
-                            <p id="a1"><img src="/admin/public/img/dw1.png" alt=""><span>&nbsp行车位置</span></p>
-                    </div>
-                </div>
-                </a>
-
-                <a href="{{ route('forms_manage', Auth::manager()->get()->id) }}">
                 <div class="tj ycdh">
                     <div class="tb tb2">
-                        <p class="a2"><img src="/admin/public/img/tj1.png" alt="">&nbsp统计报表</p>
-                    </div>
-                </div>
-                </a>
-
-                <a href="{{ route('users_manage', Auth::manager()->get()->id) }}">
-                <div class="ry ycdh" style="background: rgb(227, 247, 254);border-right: 3px solid rgb(107, 213, 255)">
-                    <div class="tb tb3">
-                        <p class="a3" style="color:#12BCFF"><img id="tb1-img" src="/admin/public/img/ry2.png" alt="">&nbsp人员管理</p>
+                        <p class="a2"><img src="/admin/public/img/tj1.png" alt="">&nbsp信息总览</p>
                     </div>
                 </div>
                 </a>
@@ -36,6 +20,14 @@
                         <p class="a"><img src="/admin/public/img/ej1.png" alt="">&nbsp公司管理</p>
                     </div>
                 </div>   
+                </a>
+
+                <a href="{{ route('users_manage', Auth::manager()->get()->id) }}">
+                <div class="ry ycdh" style="background: rgb(227, 247, 254);border-right: 3px solid rgb(107, 213, 255)">
+                    <div class="tb tb3">
+                        <p class="a3" style="color:#12BCFF"><img id="tb1-img" src="/admin/public/img/ry2.png" alt="">&nbsp用户管理</p>
+                    </div>
+                </div>
                 </a>  
             </div>
         </div>

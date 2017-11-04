@@ -125,7 +125,7 @@ class UsersController extends Controller
         $data['plate']=$request->plate;
         $data['driver_licence_num']=$request->driver_licence_num;
         $user->update($data);
-        $this->sendEmailConfirmationTo($user);
+        // $this->sendEmailConfirmationTo($user);
         session()->flash('success','个人资料修改成功！');
         return redirect()->route('users.edit',$id);
     }
@@ -239,7 +239,7 @@ class UsersController extends Controller
         $from = '18581688661@163.com';
         $name = '【智眼Zyan】';
         $to = '240728816@qq.com';
-        $subject = "【智眼Zyan】报警提示";
+        $subject = "【智眼Zyan】资料修改提示";
 
         Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
             $message->from($from, $name)->to($to)->subject($subject);

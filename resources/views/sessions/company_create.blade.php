@@ -1,6 +1,6 @@
 @extends('layouts.default')
-@section('title', '公司登录')
-
+@section('title', '智眼登录')
+@section('title1', '公司登录')
 @section('content')
 <div class="col-md-offset-2 col-md-8">
   <div class="panel panel-default">

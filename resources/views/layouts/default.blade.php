@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title3', '智能货车助手')</title>
+    <title>@yield('title', '智眼首页')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/public/bs/css/bootstrap.min.css">
     <link rel="stylesheet" href="/admin/public/css/admin.css">

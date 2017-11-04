@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title', '加入公司')
-@section('title1', '个人中心')
+@section('title1', '用户中心')
 @section('content')
 <div class="row">
     <!-- 左边 -->
@@ -21,7 +21,7 @@
                         <p class="a3"><img id="tb1-img" src="/admin/public/img/ry1.png" alt="">&nbsp个人资料</p>
                     </div>
                 </div>
-                </a>    
+                </a>
 
                 <a href="{{ route('join_company',Auth::user()->get()->id) }}">
                 <div class="ry ycdh" style="background: rgb(227, 247, 254);border-right: 3px solid rgb(107, 213, 255)">
@@ -29,7 +29,8 @@
                         <p class="a3" style="color:#12BCFF"><img id="tb1-img" src="/admin/public/img/ej2.png" alt="">&nbsp加入公司</p>
                     </div>
                 </div>
-                </a>           
+                </a>
+       
             </div>
         </div>
         
